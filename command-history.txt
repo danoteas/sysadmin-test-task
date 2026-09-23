@@ -1,0 +1,71 @@
+    1  sudo -v
+    2  ip -br a
+    3  ip r
+    4  cat /etc/resolv.conf
+    5  ls /etc/netplan/
+    6  cat /etc/netplan/*.yaml
+    7  sudo apt update
+    8  [200~sudo -v
+    9  ip -br a
+   10  ip r
+   11  cat /etc/resolv.conf
+   12  ls /etc/netplan/
+   13  cat /etc/netplan/*.yaml
+   14  sudo -v
+   15  ip -br a
+   16  ip r
+   17  cat /etc/resolv.conf
+   18  ls /etc/netplan/
+   19  cat /etc/netplan/*.yaml
+   20  sudo nano /etc/netplan/00-installer-config.yaml
+   21  sudo netplan try
+   22  sudo netplan generate
+   23  sudo netplan apply
+   24  ip a
+   25  ping -c 2 192.168.0.1
+   26  ping -c 2 8.8.8.8
+   27  ping -c 2 10.10.10.2
+   28  ping -c 2 10.10.20.2
+   29  nano ~/vlan-description.md
+   30  ls $env:USERPROFILE\.ssh\
+   31  dir %USERPROFILE%\.ssh
+   32  ssh-keygen -t ed25519
+   33  type $env:USERPROFILE\.ssh\id_ed25519.pub | ssh danoteas@192.168.0.200 "mkdir -p ~/.ssh && chmod 700 ~/.ssh && cat >> ~/.ssh/authorized_keys && chmod 600 ~/.ssh/authorized_keys"
+   34  dir %USERPROFILE%\.ssh
+   35  ды
+   36  ls
+   37  ssh-keygen -t ed25519
+   38  ls /home/danoteas/.ssh/
+   39  sudo nano /etc/ssh/sshd_config.d/60-cloudimg-settings.conf
+   40  sudo nano /etc/ssh/sshd_config
+   41  sudo systemctl restart ssh
+   42  sudo wg set wg0 peer OOrJyTFBMtEpo5exYW8cawPH1Cb1RRD6bRhHUJZ/CnA= remove
+   43  sudo wg set wg0 peer 2tIasAflo3FlunTEIcN7YIuUKVu5Ujqt9MqEjjSsjiU= allowed-ips 10.0.0.2/32
+   44  sudo wg show
+   45  sudo nano /etc/wireguard/wg0.conf
+   46  exit
+   47  sudo wg show
+   48  sudo wg set wg0 peer OOrJyTFBMtEpo5exYW8cawPH1Cb1RRD6bRhHUJZ/CnA= remove 2>/dev/null
+   49  sudo wg set wg0 peer 2tIasAflo3FlunTEIcN7YIuUKVu5Ujqt9MqEjjSsjiU= allowed-ips 10.0.0.2/32
+   50  sudo wg show
+   51  sudo nano /etc/wireguard/wg0.conf
+   52  exit
+   53  sudo wg show
+   54  sudo ufw status
+   55  sudo wg set wg0 peer P2/3jhoZfgPETq0cVBOE/zFHYwZe/45bxRgqJdmWMxs= allowed-ips 10.0.0.2/32
+   56  sudo wg show
+   57  sudo nano /etc/wireguard/wg0.conf
+   58  sudo systemctl restart wg-quick@wg0
+   59  sudo wg show
+   60  echo 'export PROMPT_COMMAND="history -a; $PROMPT_COMMAND"' >> ~/.bashrc
+   61  source ~/.bashrc
+   62  history -a
+   63  history | tail -20
+   64  history | tail -120
+   65  mkdir -p ~/sysadmin-test-task/{network,ssh,vpn,proxmox/screenshots}
+   66  cp /etc/netplan/00-installer-config.yaml ~/sysadmin-test-task/network/netplan.yaml
+   67  cp ~/vlan-description.md ~/sysadmin-test-task/network/
+   68  sudo cp /etc/wireguard/wg0.conf ~/sysadmin-test-task/vpn/wg0-server.conf
+   69  sudo chown -R $USER:$USER ~/sysadmin-test-task/
+   70  history -a
+   71  history > ~/sysadmin-test-task/command-history.txt
